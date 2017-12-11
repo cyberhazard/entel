@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="57px" viewBox="0 0 160 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-391.000000, -5931.000000)" fill="#1174BF">
+            <g id="#8" transform="translate(0.000000, 5831.000000)">
+                <g id="logo" transform="translate(391.000000, 100.000000)">
+                    <text id="ENTEL" opacity="0.300000012" font-family="RobotoSlab-Bold, Roboto Slab" font-size="36" font-weight="bold">
+                        <tspan x="20.4541016" y="42">ENTEL</tspan>
+                    </text>
+                    <text id="ENTEL" font-family="RobotoSlab-Bold, Roboto Slab" font-size="36" font-weight="bold">
+                        <tspan x="20.4541016" y="40">ENTEL</tspan>
+                    </text>
+                    <g id="right_line" transform="translate(95.000000, 48.000000)">
+                        <rect id="Rectangle-2-Copy-2" opacity="0.300000012" x="0" y="4" width="61" height="2" rx="1"></rect>
+                        <rect id="Rectangle-2" x="0" y="3" width="61" height="2" rx="1"></rect>
+                        <circle id="Oval-3-Copy-2" opacity="0.300000012" cx="61" cy="5" r="4"></circle>
+                        <circle id="Oval-3" cx="61" cy="4" r="4"></circle>
+                    </g>
+                    <g id="left_line" transform="translate(32.000000, 4.500000) rotate(-180.000000) translate(-32.000000, -4.500000) ">
+                        <rect id="Rectangle-2-Copy-3" opacity="0.300000012" x="0" y="3" width="61" height="2" rx="1"></rect>
+                        <rect id="Rectangle-2-Copy" x="0" y="4" width="61" height="2" rx="1"></rect>
+                        <circle id="Oval-3-Copy-3" opacity="0.300000012" cx="60" cy="4" r="4"></circle>
+                        <circle id="Oval-3-Copy" cx="60" cy="5" r="4"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
