@@ -1,0 +1,124 @@
+.contacts-land
+  padding 10rem 0
+  font-family Roboto
+  &__content
+    display flex
+    justify-content: space-between
+    align-items: flex-start
+  &__left
+    flex-basis 28%
+  &__item
+    margin-bottom 10rem
+    &:last-child
+      margin-bottom 0
+  &__title
+    font-weight: 700
+    font-size 2rem
+    margin-bottom 2.4rem
+  &__link
+    color black
+    font-weight: 400
+    display block
+    font-size 1.6rem
+    margin-bottom 2rem
+    position relative
+    padding-left 3.4rem
+    line-height 2.4rem
+    transition 0.3s
+    cursor pointer
+    &:hover
+      color #187CC8
+    &:before
+      content ''
+      position absolute
+      left 0
+      top 0
+      width 2.4rem
+      font-family: FontAwesome
+      font-size 2rem
+      color #187CC8
+      text-align: center
+    &_phone:before
+      content '\f095'
+    &_mail:before
+      content '\f003'
+    &_target:before
+      content '\f041'
+  &__right
+    flex-basis 48%
+  &__form
+    width 100%
+    padding 4.4rem 6.6rem
+    box-shadow: 0 1rem 2.4rem RGBA(0,0,0,.1);
+    &_title
+      font-size 3rem
+      text-align center
+      font-family: RobotoSlab
+      margin-bottom 4rem
+    &_string
+      display flex
+      justify-content: space-between
+      align-items: flex-start
+    &_item
+      width 100%
+      margin-right 3rem
+      &:last-child
+        margin-right 0
+      & label
+        display block
+        font-size 1.1rem
+        color #BEBEBE
+        font-family: Roboto
+        font-weight: 400
+    &_input
+      width 100%
+      font-size 1.4rem
+      color #BEBEBE
+      border none
+      padding 0.8rem
+      border-bottom 1px solid #BEBEBE
+      margin-bottom 5.4rem
+      transition 0.3s
+      &:hover
+        border-bottom 1px solid #727272
+      &:focus
+        border-bottom 1px solid #727272
+    &_footer
+      text-align center
+    &_offer
+      display flex
+      font-family: Roboto
+      font-size 1.4rem
+      color #ACACAC
+      margin-bottom 5rem
+      & label
+        display: inline-block
+        min-width: 16px;
+        width 16px
+        height 16px
+        background url('../images/checkbox-no.png') center center no-repeat
+        background-size contain
+        margin-right 20px
+        position relative
+        cursor pointer
+      & input
+        display none
+        margin-right 14px
+      &_inner
+        & span
+          color #187CC8
+          text-decoration: underline
+          cursor pointer
+
+.contacts-land__form_offer input[type='checkbox']:checked + span
+  position: absolute
+  left 0
+  top 0
+  min-width: 16px;
+  width 16px
+  height: 16px
+  cursor: pointer
+  background url('../images/checkbox-ye.png') center center no-repeat
+  background-size contain
+
+
