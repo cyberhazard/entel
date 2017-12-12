@@ -1,22 +1,23 @@
 section.clients-slider
   .section__title Наши клиенты
   .g-wrapper
-    .clients-slider__container
-      .clients-slider__wrapper
-        .clients-slider__slide
+    .clients-slider__container.swiper-container
+      .clients-slider__wrapper.swiper-wrapper
+        .clients-slider__slide.swiper-slide
           img(src="./images/clients-1.png").clients-slider__img
-        .clients-slider__slide
+        .clients-slider__slide.swiper-slide
           img(src="./images/clients-2.png").clients-slider__img
-        .clients-slider__slide
+        .clients-slider__slide.swiper-slide
           img(src="./images/clients-3.png").clients-slider__img
-        .clients-slider__slide
+        .clients-slider__slide.swiper-slide
           img(src="./images/clients-4.png").clients-slider__img
-        .clients-slider__slide
+        .clients-slider__slide.swiper-slide
           img(src="./images/clients-1.png").clients-slider__img
-        .clients-slider__slide
+        .clients-slider__slide.swiper-slide
           img(src="./images/clients-2.png").clients-slider__img
-    //- <div class="swiper-pagination"></div>
-    //-   <div class="swiper-button-prev"></div>
-    //-   <div class="swiper-button-next"></div>
+      .swiper-button-prev
+        include ../../images/arrow-left.svg
+      .swiper-button-next
+        include ../../images/arrow-right.svg
 
 

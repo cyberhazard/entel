@@ -1,11 +1,11 @@
 
 // clients slider
 const clientsSlider = new Swiper('.clients-slider__container', {
-  slidesPerView: 3,
+  slidesPerView: 4,
   spaceBetween: 30,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
