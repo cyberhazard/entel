@@ -67,6 +67,8 @@
       &:hover
         color #42aafa
   &__socials
+    &_mobile
+      display none
     & svg
       margin-right 2rem
       transition 0.3s
@@ -78,5 +80,72 @@
         &:hover
           fill rgb(66, 170, 250)
 
-
+@media (max-width:1024px)
+  .footer
+    padding 6rem 0 4rem
+    &__top
+      &_column
+        &:first-child
+          margin-right 0rem
+    &__text
+      font-size 1rem
+      &_bottom
+        font-size 1.2rem
+        line-height 1.8rem
+        margin-bottom 1.8rem
+    &__logo
+      margin-bottom 3.2rem
+    &__title
+      font-size 1.4rem
+      margin-bottom 2.6rem
+    &__link
+      font-size 1.2rem
+      margin-bottom 2rem
+    &__bottom
+      &_link
+        font-size 1.1rem
+        margin-right 2rem
+@media (max-width:665px)
+  .footer
+    padding 6rem 0 4rem
+    &__text
+      display none
+      &_bottom
+        display block
+        font-size 1.2rem
+        line-height 1.8rem
+    &__title
+      font-size 1.4rem
+    &__link
+      font-size 1.2rem
+      margin-bottom 1.8rem
+      line-height 1.6rem
+    &__top
+      &_column
+        flex-basis 48%
+        &:nth-child(2)
+          display none
+        &:first-child
+          flex-basis: 100%
+          display: flex
+          justify-content: space-between
+          align-items center
+          margin-bottom 3rem
+    &__bottom
+      &_right
+        display none
+      &_link
+        display block
+        width 100%
+        margin-right 0
+        margin-bottom 1.8rem
+        font-size 1rem
+        &:last-child
+          margin-bottom 0
+    &__socials
+      &_mobile
+        display flex
+    &__logo
+      max-width: 8.7rem
+      margin-bottom 0
 
