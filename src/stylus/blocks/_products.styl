@@ -52,3 +52,33 @@
 .products__item:hover .products__link
   color #1579C4
   border-bottom 1px dotted #1579C4
+
+@media (max-width:1024px)
+  .products
+    &__content
+      justify-content: space-around
+    &__item
+      flex-basis 40%
+      padding 0 4rem 3rem
+    &__title
+      font-size 1.6rem
+    &__link
+      font-size 1.4rem
+    &__img
+      max-width: 17rem
+@media (max-width:566px)
+  .products
+    padding 5rem 0 6rem
+    &__content
+      justify-content: space-around
+    &__item
+      flex-basis 100%
+      padding 0 6rem 3rem
+    &__title
+      font-size 1.4rem
+    &__link
+      font-size 1.2rem
+    &__img
+      max-width: 16rem
+
+
