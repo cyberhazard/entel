@@ -42,6 +42,7 @@ const certificatesSlider = new Swiper('.certificates-slider__container', {
   }
 });
 
+halkaBox.run("certificates-slider__gallery");
 
 
 // clients slider
