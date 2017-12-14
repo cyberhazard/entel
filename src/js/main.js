@@ -23,6 +23,7 @@ const headerSlider = new Swiper('.header-slider__container', {
 const certificatesSlider = new Swiper('.certificates-slider__container', {
   slidesPerView: 4,
   spaceBetween: 30,
+  loop: true,
   navigation: {
     nextEl: '.certificates-slider__next',
     prevEl: '.certificates-slider__prev',
@@ -47,6 +48,7 @@ const certificatesSlider = new Swiper('.certificates-slider__container', {
 const clientsSlider = new Swiper('.clients-slider__container', {
   slidesPerView: 4,
   spaceBetween: 30,
+  loop: true,
   navigation: {
     nextEl: '.clients-slider__next',
     prevEl: '.clients-slider__prev',
