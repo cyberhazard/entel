@@ -1,0 +1,44 @@
+.certificates-slider
+  background: #F7F7F7
+  padding 9rem 0
+  position: relative
+  &__container
+    width 100%
+    height: 100%
+  &__slide
+    text-align: center
+    display flex
+    justify-content: center
+    align-items: center
+  &__img
+    width 100%
+    height: 38rem
+    object-fit: contain
+
+.certificates-slider .swiper-button-prev, .certificates-slider .swiper-button-next
+  background: none
+.certificates-slider .swiper-button-prev, .certificates-slider .swiper-button-next
+  background: none
+  width 62px
+  height 62px
+
+@media (max-width:1240px)
+  .certificates-slider
+    &__img
+      height 32rem
+  .certificates-slider .swiper-button-prev svg, .certificates-slider .swiper-button-next svg
+    width 38px
+    height 38px
+  .certificates-slider .swiper-button-prev, .certificates-slider .swiper-button-next
+    width 38px
+    height 38px
+  .g-wrapper__slider_certificates
+    top -16rem
+@media (max-width:685px)
+  .certificates-slider
+    padding 5rem 0 0rem
+    &__img
+      height: 26.8rem
+  .g-wrapper__slider_certificates
+    top -14rem
+
