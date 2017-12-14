@@ -16,8 +16,20 @@
 
 .clients-slider .swiper-button-prev, .clients-slider .swiper-button-next
   background: none
+.clients-slider .swiper-button-prev, .clients-slider .swiper-button-next
+  background: none
+  width 62px
+  height 62px
 
-.clients-slider .swiper-button-next
-  left: calc(100% - 14%);
-.clients-slider .swiper-button-prev
-  right calc(100% - 14%);
+@media (max-width:1330px)
+  .clients-slider
+    &__img
+      height: 7rem
+  .clients-slider .swiper-button-prev svg, .clients-slider .swiper-button-next svg
+    width 38px
+    height 38px
+  .clients-slider .swiper-button-prev, .clients-slider .swiper-button-next
+    width 38px
+    height 38px
+  .g-wrapper__slider
+    top -3.5rem

@@ -28,4 +28,19 @@ const clientsSlider = new Swiper('.clients-slider__container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    // when window width is <= 320px
+    1375: {
+      spaceBetween: 0,
+    },
+    1050: {
+      slidesPerView:3,
+    },
+    786: {
+      slidesPerView:2,
+    },
+    564: {
+      slidesPerView:1,
+    },
+  }
 });
