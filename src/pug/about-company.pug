@@ -1,0 +1,47 @@
+extends layouts/_main.pug
+
+block content
+  include ./blocks/header.pug
+  .about-company
+    .g-wrapper
+      include ./blocks/breadcrumbs.pug
+      .about-company__wrapper
+        .about-company__sidebar
+           .sidebar-product__header Разделы
+           a(href="#info").sidebar-product__title.about-company__sidebar_title Общая информация
+           a(href="#certif").sidebar-product__title.about-company__sidebar_title Наши сертификаты
+           a(href="#").sidebar-product__title.about-company__sidebar_title Наши клиенты
+           a(href="#").sidebar-product__title.about-company__sidebar_title Новости и мероприятия
+           a(href="#contacts").sidebar-product__title.about-company__sidebar_title Контакты
+        .about-company__content
+          .about-company__block#info
+            .about-company__title Общая информация о компании
+            .about-company__text ООО «Эквипмент Трансфер Сервис» («ЭТС») с 2006 года является официальным дистрибьютором французского производителя SOCOMEC и осуществляет поставки силового коммутационного и контрольно-измерительного оборудования
+            .about-company__subtitle Наши сильные стороны:
+            .about-company__okay Прямые поставки
+            .about-company__okay Грамотная логистика
+            .about-company__okay Свой склад
+            .about-company__okay Техническая поддержка сертифицированными инженерами, прошедшими обучение на заводах-изготовителях
+            .about-company__okay Обширная региональная дилерская сеть, позволяющая осуществлять качественное обслуживание потребностей заказчиков в отдаленных регионах России
+          .about-company__block
+            .about-company__subtitle Нашу продукцию используют:
+            .about-company__text <span>Предприятия космической отрасли:</span> Космодром "Восточный"
+            .about-company__text <span>Предприятия атомной энергетики:</span> ОАО «Протвинский опытный завод «ПРОГРЕСС», Нововоронежская АЭС, Смоленская АЭС, Белоярская АЭС, Балаковская АЭС, Белорусская АЭС
+            .about-company__text <span>Телекоммуникационные компании:</span> ПАО «МТС», ФГУП«Российская телевизионная и радиовещательная сеть» (РТРС) филиал "Архангельский областной радиотелевизионный передающий центр"
+            .about-company__text <span>Транспорт:</span> Монорельсовая дорога на ВДНХ г. Москва, МКЖД, Порт «Восточный» г. Владивосток
+            .about-company__text <span>Промышленность:</span> Цементный завод «Lafarge» г. Воскресенск, ЗАО «Чебоксарский электромеханический завод», ООО "Чебоксарская Электротехника и Автоматика", ЗАО «Чебоксарский электроаппаратный завод»,  Компания ООО «МАРС» «А. Коркунов», Завод по переработке молока «Дмитрова Гора» Тверская обл., АО ИНДЕЗИТ ИНТЕРНЭШНЛ" г.Липецк, АО "Машзавод ЭТС", Табачная фабрика «ПЕТРО» Санкт-Петербург
+            .about-company__text <span>Энергетика:</span> ОАО «СО ЕЭС», ООО «Авелар Солар Технолоджи», компания по строительству солнечных электростанций, Серебрянская ГЭС на Кольском полуострове
+            .about-company__text <span>Предприятия нефтегазовой отрасли:</span> ОАО «Транснефть»
+            .about-company__text <span>А так же:</span> Дельфинарий на ВДНХ «Мир дельфинов» г. Москва, Инновационный центр «Сколково», ТЦ Каширская Плаза г. Москва, ЦОД Мосгаз, Бизнес-центр Румянцево г. Москва
+            .about-company__block_footer
+              .about-company__quad Мы ценим время наших клиентов и всегда готовы к открытому диалогу!
+
+
+          .about-company__block#certif
+            .about-company__title Наши сертификаты
+            //include ./blocks/certificates-slider-about.pug
+
+          include ./blocks/contacts-land.pug
+
+
+  include ./blocks/footer.pug

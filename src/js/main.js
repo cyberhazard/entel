@@ -1,3 +1,5 @@
+//Smooth scroll
+const scroll = new SmoothScroll('a[href*="#"]');
 //header slider
 const headerSlider = new Swiper('.header-slider__container', {
   spaceBetween: 0,
@@ -85,3 +87,18 @@ const tabsClick = function(){
   })
 }
 tabsClick();
+
+//certificates slider, about company page
+const certificatesSliderAbout = new Swiper('.certif-mini__container', {
+  slidesPerView: 3,
+  spaceBetween: 0,
+  loop: true,
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.certif-mini__next',
+    prevEl: '.certif-mini__prev',
+  },
+  slidesOffsetBefore: 18,
+});
+
+halkaBox.run("certif-mini__gallery");
