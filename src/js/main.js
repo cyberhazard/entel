@@ -71,3 +71,17 @@ const clientsSlider = new Swiper('.clients-slider__container', {
   }
 });
 
+// tabs categories page sidebar
+const tabsClick = function(){
+  if(!document.querySelector('.sidebar-product')) return null
+  const tabs = [...document.querySelectorAll('.sidebar-product__item')];
+  const contents = [...document.querySelectorAll('.sidebar-product__content')];
+  const titles = [...document.querySelectorAll('.sidebar-product__title')];
+  tabs.forEach((tab,i)=>{
+    tab.onclick = (e) => {
+      tabs.forEach(el=>el.classList.remove('sidebar-product__item_active'));
+      e.currentTarget.classList.add('sidebar-product__item_active');
+    }
+  })
+}
+tabsClick();

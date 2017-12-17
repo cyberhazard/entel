@@ -2,5 +2,8 @@ extends layouts/_main.pug
 
 block content
   include ./blocks/header.pug
-  include ./blocks/breadcrumbs.pug
-  .categories__wrapper
+  section.categories
+    include ./blocks/breadcrumbs.pug
+    .g-wrapper
+      .categories__wrapper
+        include ./blocks/sidebar-product.pug
