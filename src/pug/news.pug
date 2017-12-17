@@ -1,0 +1,102 @@
+extends layouts/_main.pug
+
+block content
+  include ./blocks/header.pug
+  .news-page
+    include ./blocks/breadcrumbs.pug
+    .g-wrapper
+      .contacts-page__title.news-page__title Новости и мероприятия
+      .news-page__content
+        .news-page__items
+          .news-page__item
+            img(src="./images/news-1.png").news-land__img.news-page__img
+            .news-land__title.news-page__subtitle В Новосибирске прошел семинар ENTEL
+            .news-land__date.news-page__date 24/10/2017
+            .news-land__text.news-page__text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют, потому что
+            a(href="#").products__link.news-land__link Подробнее
+          .news-page__item
+            img(src="./images/news-1.png").news-land__img.news-page__img
+            .news-land__title.news-page__subtitle В Новосибирске прошел семинар ENTEL
+            .news-land__date.news-page__date 24/10/2017
+            .news-land__text.news-page__text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют, потому что
+            a(href="#").products__link.news-land__link Подробнее
+          .news-page__item
+            img(src="./images/news-1.png").news-land__img.news-page__img
+            .news-land__title.news-page__subtitle В Новосибирске прошел семинар ENTEL
+            .news-land__date.news-page__date 24/10/2017
+            .news-land__text.news-page__text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют, потому что
+            a(href="#").products__link.news-land__link Подробнее
+          .news-page__item
+            img(src="./images/news-1.png").news-land__img.news-page__img
+            .news-land__title.news-page__subtitle В Новосибирске прошел семинар ENTEL
+            .news-land__date.news-page__date 24/10/2017
+            .news-land__text.news-page__text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют, потому что
+            a(href="#").products__link.news-land__link Подробнее
+          .news-page__item
+            img(src="./images/news-1.png").news-land__img.news-page__img
+            .news-land__title.news-page__subtitle В Новосибирске прошел семинар ENTEL
+            .news-land__date.news-page__date 24/10/2017
+            .news-land__text.news-page__text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют, потому что
+            a(href="#").products__link.news-land__link Подробнее
+          .news-page__item
+            img(src="./images/news-1.png").news-land__img.news-page__img
+            .news-land__title.news-page__subtitle В Новосибирске прошел семинар ENTEL
+            .news-land__date.news-page__date 24/10/2017
+            .news-land__text.news-page__text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют, потому что
+            a(href="#").products__link.news-land__link Подробнее
+          .news-page__item
+            img(src="./images/news-1.png").news-land__img.news-page__img
+            .news-land__title.news-page__subtitle В Новосибирске прошел семинар ENTEL
+            .news-land__date.news-page__date 24/10/2017
+            .news-land__text.news-page__text Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют, потому что
+            a(href="#").products__link.news-land__link Подробнее
+        .news-page__sidebar
+          .sidebar-product__header.news-page__sidebar_header Фильтры
+          .news-page__sidebar_content
+            .news-page__sidebar_block
+              .news-page__sidebar_title.news-page__sidebar_title_theme Тип контента:
+              .news-page__sidebar_item
+                .contacts-land__form_offer.news-page__sidebar_offer
+                  label
+                    input(type="checkbox").contacts-land__form_checkbox
+                    span
+                .news-page__sidebar_title Новости
+              .news-page__sidebar_item
+                .contacts-land__form_offer.news-page__sidebar_offer
+                  label
+                    input(type="checkbox").contacts-land__form_checkbox
+                    span
+                .news-page__sidebar_title Мероприятия
+              .news-page__sidebar_item
+                .contacts-land__form_offer.news-page__sidebar_offer
+                  label
+                    input(type="checkbox").contacts-land__form_checkbox
+                    span
+                .news-page__sidebar_title Статьи
+              .news-page__sidebar_item
+                .contacts-land__form_offer.news-page__sidebar_offer
+                  label
+                    input(type="checkbox").contacts-land__form_checkbox
+                    span
+                .news-page__sidebar_title Видеозаписи
+            .news-page__sidebar_block
+              .news-page__sidebar_title.news-page__sidebar_title_theme Год публикации:
+              select
+                option 2016
+            .news-page__sidebar_block
+              .news-page__sidebar_title.news-page__sidebar_title_theme Месяц публикации:
+              select
+                option Июль
+      .news-page__pagination
+        a(href="").news-page__pagination_left
+        .news-page__pagination_pages
+          a(href="").news-page__pagination_number.news-page__pagination_number_active 1
+          a(href="").news-page__pagination_number 2
+          a(href="").news-page__pagination_number 3
+          a(href="").news-page__pagination_number 4
+          a(href="").news-page__pagination_number 5
+          a(href="").news-page__pagination_number 6
+        a(href="").news-page__pagination_right
+
+
+  include ./blocks/footer.pug

@@ -1,0 +1,117 @@
+.news-page
+  background #F8F8F8
+  padding-bottom: 12rem
+  &__title
+    font-size 2.4rem
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-bottom 3rem
+    margin-bottom 3rem
+    border-bottom 1px solid #e2e2e2
+  &__items
+    flex-basis 70%
+    display flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap wrap
+  &__item
+    flex-basis 28%
+    margin-bottom 6rem
+  &__sidebar
+    flex-basis 23%
+  &__subtitle
+    color black
+    margin-bottom 0.8rem
+  &__date
+    margin-bottom 0.8rem
+  &__text
+    color black
+    margin-bottom 1.4rem
+  &__img
+    max-width 100%
+    margin-bottom 1.4rem
+  &__sidebar
+    &_block
+      margin-bottom 2rem
+    &_item
+      display flex
+      justify-content: flex-start
+      align-items: center
+      margin-bottom 1rem
+    &_header
+      font-size 1.4rem
+    &_content
+      background white
+      padding 2.4rem 3rem
+    &_offer
+      margin-bottom 0
+      & label
+        margin-right 1rem
+    &_title
+      font-family Roboto
+      font-size 1.4rem
+      &_theme
+        font-weight: 700
+        margin-bottom 1.4rem
+  &__pagination
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    &_left
+      position: relative
+      margin-right 3rem
+      &:after
+        content '\f104'
+        font-family: FontAwesome
+        top 0
+        left 0
+        font-size 1.6rem
+        color black
+    &_right
+      position: relative
+      margin-left 3rem
+      &:after
+        content '\f105'
+        font-family: FontAwesome
+        top 0
+        left 0
+        font-size 1.6rem
+        color black
+    &_number
+      padding 1rem 1.4rem
+      font-family Roboto
+      font-weight: 500
+      font-size 1.6rem
+      color black
+      &_active
+        background white
+        border-radius 50%
+
+@media (max-width:1024px)
+  .news-page
+    &__item
+      flex-basis 44%
+    &__pagination
+      &_number
+        &:nth-child(n+5)
+          display none
+@media (max-width:566px)
+  .news-page
+    &__item
+      flex-basis 100%
+    &__items
+      flex-basis 100%
+    &__sidebar
+      display none
+    &__title
+      font-size 1.8rem
+    &__pagination
+      &_number
+        &:nth-child(n+4)
+          display none
+
+
+
+
