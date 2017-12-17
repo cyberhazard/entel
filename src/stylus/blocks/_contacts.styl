@@ -1,0 +1,102 @@
+.contacts-page
+  background #F8F8F8
+  &__title
+    font-size 2.4rem
+    font-family RobotoSlab
+    line-height 3.8rem
+    padding-bottom 1rem
+    margin-bottom 2rem
+    border-bottom 1px solid #E2E2E2
+    &_center
+      text-align: center
+      border-bottom none
+      margin-bottom 0
+  &__subtitle
+    font-family Roboto
+    font-weight: 700
+    font-size 1.6rem
+    line-height 2.6rem
+    margin-bottom 1rem
+    & a
+      color #1579C5
+  &__grids
+    display flex
+    justify-content: space-between
+  &__grid
+    flex-basis 40%
+  &__callback
+    flex-basis 55%
+  &__text
+    font-size 1.4rem
+    font-family Roboto
+    & span
+      color #1579C5
+  &__info
+    &:nth-child(2)
+      margin-bottom 5rem
+  &__callback
+    display: flex
+    justify-content: center
+  &__content
+    padding-bottom 3rem
+    border-bottom 1px solid #E2E2E2
+    margin-bottom 3rem
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap wrap
+  &__link
+    font-size 1.4rem
+    margin-bottom 1.4rem
+  &__label
+    font-size 1.4rem !important
+  &__img
+    display: block
+    margin 0 auto
+    height: 78.6rem
+    width 100%
+    object-fit cover
+  &__map
+    margin-bottom 8rem
+
+@media (max-width:1024px)
+  .contacts-page
+    &__content
+      display: block
+    &__form
+      max-width 37.6rem
+      padding 3rem 7rem
+      &_button
+        padding 1.2rem 2rem
+        font-size 1.4rem
+      &_title
+        font-size 1.8rem
+      &_input
+        margin-bottom 1rem
+      &_item
+        margin-bottom 2rem
+      &_offer
+        margin-bottom 3rem
+        & label
+          margin-right 12px
+        &_inner
+          padding-left 0
+          font-size 1.2rem
+    &__img
+      max-height: 49.6rem
+    &__callback
+      margin-top 4rem
+@media (max-width:566px)
+  .contacts-page
+    &__title
+      font-size 1.8rem
+    &__subtitle
+      font-size 1.4rem
+    &__link
+      font-size 1.4rem
+    &__info
+      &:nth-child(2)
+        margin-bottom 3rem
+    &__form
+      max-width: 100%
+      padding 3rem 4rem

@@ -1,0 +1,48 @@
+extends layouts/_main.pug
+
+block content
+  include ./blocks/header.pug
+  .contacts-page
+    .g-wrapper
+      include ./blocks/breadcrumbs.pug
+      .contacts-page__title ENTEL - официальный дистрибьютор SOCOMEC в России
+      .contacts-page__content
+        .contacts-page__grid
+          .contacts-page__info
+            .contacts-page__subtitle Поставка оборудования гарантированного и бесперебойного электроснабжения до 5 МВт
+            .contacts-land__link.contacts-land__link_target.contacts-page__link Россия, Москва, пос. Мосрентген, завод "Мосрентген" стр. 1А
+            a(href="tel:+74952155080").contacts-land__link.contacts-land__link_phone.contacts-page__link +7 (495) 215-50-80
+            a(href="mailto:sales@entel.ru").contacts-land__link.contacts-land__link_mail.contacts-page__link sales@entel.ru
+          .contacts-page__info
+            .contacts-page__subtitle Поставка оборудования коммутации, контроля и защиты до 5000 Ампер
+            .contacts-land__link.contacts-land__link_target.contacts-page__link Россия, Москва, пос. Мосрентген, завод "Мосрентген" стр. 1А
+            a(href="tel:+74999221012").contacts-land__link.contacts-land__link_phone.contacts-page__link +7 (499) 922-10-12
+            a(href="mailto:socomec@entel.ru").contacts-land__link.contacts-land__link_mail.contacts-page__link socomec@entel.ru
+          .contacts-page__info
+            .contacts-page__subtitle Войди в комманду - <a href="#">стань Дилером Socomec</a>
+            .contacts-page__text Если вы пока не готовы стать Дилером, то получите <span>статус Партнера Socomec</span> и уже в ближайшем будущем вы достигните уровня Дилера
+
+        .contacts-page__callback
+          form.contacts-land__form.contacts-page__form
+            .contacts-land__form_title.contacts-page__form_title Написать нам
+            .contacts-land__form_string
+              .contacts-land__form_item
+                label Ваше имя
+                input(type="text" name="name").contacts-land__form_input.contacts-page__form_input
+              .contacts-land__form_item.contacts-page__form_item
+                label Ваш телефон
+                input(type="tel" name="tel").contacts-land__form_input.contacts-page__form_input
+            .contacts-land__form_item
+              label.contacts-page__label Ваше сообщение
+              input(type="text" name="text").contacts-land__form_input.contacts-page__form_input
+            .contacts-land__form_offer.contacts-page__form_offer
+              label
+                input(type="checkbox").contacts-land__form_checkbox.contacts-page__form_checkbox
+                span
+              .contacts-land__form_offer_inner.contacts-page__form_offer_inner Я принимаю <span>соглашение сайта</span> об обработке персональных данных
+            .contacts-land__form_footer
+              button(type="submit").button.contacts-page__form_button Отправить сообщение
+      .contacts-page__map
+        .contacts-page__title.contacts-page__title_center Схема проезда
+        img(src="./images/big-map.png").contacts-page__img
+  include ./blocks/footer.pug
