@@ -1,0 +1,289 @@
+.card-item
+  background: #F8F8F8
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap wrap
+  &__left
+    flex-basis: 70%
+  &__content
+    padding-bottom 2rem
+    margin-bottom 2rem
+    border-bottom 1px solid #E2E2E2
+  &__header
+    display flex
+    justify-content: flex-start
+    align-items: flex-start
+    margin-bottom 3rem
+  &__img
+    width 100%
+    max-width: 25rem
+    object-fit: cover
+    margin-right 4rem
+  &__about
+    padding-top 2rem
+  &__product
+    margin-bottom 3rem
+  &__title
+    font-family RobotoSlab
+    font-weight: 700
+    font-size 3rem
+    line-height 3.8rem
+    margin-bottom 1.6rem
+  &__subtitle
+    font-family Roboto
+    font-size 1.8rem
+    line-height 2.6rem
+    font-weight 700
+  &__load
+    font-weight 400
+  &__function
+    display flex
+    align-items: flex-start
+  &__link
+    margin-right 4rem
+    &_youtube
+      text-decoration: underline
+      &:before
+        content '\f16a'
+  &__cross
+    padding-left 1rem
+  &__documentation
+    cursor: pointer
+    display: flex
+    align-items: center
+    color #1174BF
+    font-size 1.4rem
+    font-family Roboto
+    font-weight: 700
+    position: relative
+    padding-left 2.4rem
+    &:before
+      content '\f01c'
+      top 0
+      left 0
+      color #1174BF
+      font-family FontAwesome
+      position: absolute
+      font-size 1.8rem
+    &:after
+      content ''
+      right: calc(-2% - 5px);
+      bottom: -45px;
+      width 31px
+      height: 19px
+      background: url('../images/Triangle.svg') center center no-repeat
+      background-size cover
+      position absolute
+  &__instruction
+    border 1px solid #1174BF
+    position: relative
+    &_elem
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding 1rem 5rem
+      border-bottom 1px solid #E2E2E2
+    &_title
+      font-family Roboto
+      font-weight 700
+      font-size 1.4rem
+      line-height 2.2rem
+      padding-left 1.4rem
+      flex-basis 54%
+      position relative
+      &:before
+        content ''
+        position: absolute
+        left 0
+        top 9px
+        width 5px
+        height 5px
+        background: #1174BF
+    &_format
+      font-family Roboto
+      font-size 1.4rem
+    &_act
+      font-family Roboto
+      font-weight 500
+      font-size 1.4rem
+      color #1174BF
+      cursor pointer
+  &__information
+    flex-basis 70%
+  &__block
+    padding-bottom 2rem
+    border-bottom 1px solid #E2E2E2
+    margin-bottom 2rem
+    &_title
+      font-family Roboto
+      font-weight 700
+      font-size 1.6rem
+      margin-bottom 1rem
+    &_text
+      font-family Roboto
+      font-size 1.4rem
+      line-height 2.2rem
+      font-weight 400
+      &_margin
+        margin-bottom 2rem
+  &__grids
+    display flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap wrap
+  &__grid
+    flex-basis 32%
+    &_item
+      font-size 1.4rem
+      font-family Roboto
+      font-weight 700
+      margin-bottom 1rem
+  &__videoblock
+    display flex
+    justify-content: space-between
+    align-items: flex-start
+  &__video
+    margin-right 4rem
+    max-width: 44rem
+    width: 100%
+  &__contacts
+    padding 2rem 0 8rem
+    &_title
+      font-family RobotoSlab
+      font-weight 700
+      font-size 3rem
+      line-height 3.8rem
+      margin-bottom 1rem
+      text-align: center
+    &_subtitle
+      font-family Roboto
+      font-size 2rem
+      font-weight 400
+      text-align: center
+      margin-bottom 4rem
+  &__form
+    margin: 0 auto
+    max-width 59rem
+    width 100%
+    padding 3.6rem 6rem
+    &_offer
+      margin-bottom 3.8rem
+      &_inner
+        width 78%
+  &__button
+    padding 1.2rem 3rem
+  &__sidebar
+    &_header
+      padding 1.4rem 2rem
+    &_squad
+      font-weight: 400
+      margin-bottom 1rem
+    &_icons
+      display flex
+      justify-content: flex-start
+      align-items: center
+      flex-wrap wrap
+      margin-bottom 1rem
+    &_icon
+      object-fit: cover
+      margin-right 1rem
+      margin-bottom 1rem
+    &_ok
+      font-weight: 400
+      margin-bottom 1rem
+      &:before
+        content '\f00c'
+        font-family FontAwesome
+        background: none
+        width: auto
+        height: auto
+        font-size 1rem
+        top 0
+        left 0
+        color #1174bf
+    &_item
+      margin-bottom 4rem
+    &_img
+      width 100%
+      object-fit: cover
+    &_mini
+      font-size 1rem
+      font-family Roboto
+      line-height 1.6rem
+      & span
+        color #1174BF
+
+@media (max-width:1024px)
+  .card-item
+    &__sidebar
+      display none
+    &__left
+      flex-basis 100%
+    &__grid
+      flex-basis 50%
+      margin-bottom 2rem
+
+@media (max-width:701px)
+  .card-item
+    &__header
+      display block
+    &__title
+      font-size 1.8rem
+      line-height 3.8rem
+      margin-bottom 0.4rem
+    &__about
+      padding-top 1rem
+    &__subtitle
+      font-size 1.4rem
+    &__function
+      display block
+    &__link
+      display: block
+    &__documentation
+      display: inline-flex
+      align-items: center
+      &:after
+        bottom -30px
+    &__instruction
+      &_elem
+        padding 2rem 3rem
+        display: block
+      &_title
+        margin-bottom 1rem
+        font-size 1.2rem
+      &_format
+        display: inline-block
+        font-size 1.2rem
+        margin-right 1rem
+      &_act
+        font-size 1.2rem
+        margin-right 1rem
+        &:last-child
+          margin-right 0
+    &__block
+      &_title
+        font-size 1.4rem
+      &_text
+        font-size 1.2rem
+        line-height 2rem
+    &__grid
+      flex-basis: 100%
+      &_item
+        font-size 1.2rem
+    &__video
+      margin-bottom 1rem
+    &__videoblock
+      display: block
+    &__contacts
+      &_title
+        font-size 1.8rem
+        line-height 2.4rem
+      &_subtitle
+        font-size 1.4rem
+        line-height 2rem
+    &__form
+      padding 2.6rem 2rem
+      &_offer
+        margin-bottom 2rem

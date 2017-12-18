@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g id="cross" transform="translate(1.000000, 1.000000)">
+            <g id="Card-Item">
+                <g id="card_item_documents-(desktop)" opacity="0.800000012">
+                    <g id="content">
+                        <g id="header_cards">
+                            <g id="documents">
+                                <g id="cross">
+                                    <circle id="Oval" stroke="#1174BF" cx="7.5" cy="7.5" r="7.5"></circle>
+                                    <g id="Group" transform="translate(4.000000, 5.000000)" fill-rule="nonzero" fill="#1174BF">
+                                        <path d="M2.69717925,4.86152389 C2.53748863,5.0461587 2.27925387,5.0461587 2.11956324,4.86152389 C1.96014559,4.67688909 1.96014559,4.37768602 2.11956324,4.19305121 L4.01428571,2.00015781 L2.11956324,-0.19305121 C1.96014559,-0.37768602 1.96014559,-0.67688909 2.11956324,-0.86152389 C2.27925387,-1.0461587 2.53748863,-1.0461587 2.69717925,-0.86152389 L4.88043676,1.66592146 C5.03985441,1.85055627 5.03985441,2.14975934 4.88043676,2.33439415 L2.69717925,4.86152389 Z" id="Right-Arrow" transform="translate(3.500000, 2.000000) scale(-1, 1) rotate(-90.000000) translate(-3.500000, -2.000000) "></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

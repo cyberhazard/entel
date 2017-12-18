@@ -1,0 +1,160 @@
+extends layouts/_main.pug
+
+block content
+  include ./blocks/header.pug
+  .card-item
+    include ./blocks/breadcrumbs.pug
+    .g-wrapper
+      .card-item__wrapper
+        .card-item__left
+          .card-item__content
+            .card-item__header
+              img(src="./images/card-item.png").card-item__img
+              .card-item__about
+                .card-item__product
+                  .card-item__title SIRCO M и MV
+                  .card-item__subtitle Универсальные выключатели нагрузки
+                  .card-item__subtitle.card-item__load от 16 до 160 A
+                .card-item__function
+                  a(href="").categories__link.card-item__link Сравнить модели
+                  .card-item__documentation Документация
+                    img(src="./images/cross.svg").card-item__cross
+            .card-item__instruction
+              .card-item__instruction_elem
+                .card-item__instruction_title Подробное описание
+                .card-item__instruction_format PDF
+                a.card-item__instruction_act Просмотреть
+                a.card-item__instruction_act Скачать
+              .card-item__instruction_elem
+                .card-item__instruction_title Инструкция по монтажу Sirco M
+                .card-item__instruction_format PDF
+                a.card-item__instruction_act Просмотреть
+                a.card-item__instruction_act Скачать
+              .card-item__instruction_elem
+                .card-item__instruction_title Инструкция по дверному монтажу Sirco M
+                .card-item__instruction_format DOC
+                a.card-item__instruction_act Просмотреть
+                a.card-item__instruction_act Скачать
+              .card-item__instruction_elem
+                .card-item__instruction_title Инструкция по монтажу дополнительного контакта Sirco M 16-20-25-32-40-63-80-100-125,M CD 63-100
+                .card-item__instruction_format PPT
+                a.card-item__instruction_act Просмотреть
+                a.card-item__instruction_act Скачать
+          .card-item__block
+            .card-item__block_title Описание продукта
+            .card-item__block_text SIRCO M и MV являются модульными многополюсными выключателями нагрузки с ручным управлением. При выключении они обеспечивают надежную изоляцию для любых низковольтных цепей, особенно для схем управления оборудованием.<br> С использованием аксессуаров, SIRCO M может быть трансформирован в многополюсный выключатель нагрузки или 3/4-пол. реверсивный рубильник. Реверсивные рубильники SIRCO M осуществляют переключение между двумя источниками питания низкого напряжения или отключение под нагрузкой.
+          .card-item__block
+            .card-item__grids
+              .card-item__grid
+                .card-item__block_title Характеристики
+                .card-item__grid_item Принцип работы
+                  .card-item__block_text - Ручной (вращение)
+                  .card-item__block_text - Ручной (тумблер)
+                .card-item__grid_item Рукоятка прямого управления
+                  .card-item__block_text - Фронтальное
+                .card-item__grid_item Рукоятка выносного управления
+                  .card-item__block_text - Фронтальное
+                  .card-item__block_text - Боковое справа
+                  .card-item__block_text - Боковое слева
+                .card-item__grid_item Индикация разрыва
+                  .card-item__block_text - Индикация состояния контактов
+                  .card-item__block_text - Видимый разрыв
+                .card-item__grid_item Корпус устройства
+                  .card-item__block_text - Модульный
+              .card-item__grid
+                .card-item__block_title Применения
+                .card-item__block_text Главный распределительный щит
+                .card-item__block_text Распределительный щит
+                .card-item__block_text Аварийное отключение нагрузки
+                .card-item__block_text Выход генераторной установки
+                .card-item__block_text Соединение сетей
+                .card-item__block_text Локальное безопасное отключение нагрузки
+                .card-item__block_text Управление оборудованием
+                .card-item__block_text Устройства в шкафах
+              .card-item__grid
+                .card-item__block_title Функции
+                .card-item__block_text 3/4-полюсное отключение
+                .card-item__block_text 6/8-полюсное отключение
+                .card-item__block_text 3/4-полюсный переключатель (I-0-II)
+                .card-item__block_text 3/4-полюсный переключатель (I-I+II-II)
+          .card-item__block
+            .card-item__block_title Видео о продукте
+            .card-item__videoblock
+              img(src="./images/video.png").card-item__video
+              .card-item__videoblock_about
+                .card-item__block_title Описание продукта
+                .card-item__block_text.card-item__block_text_margin SIRCO M и MV являются модульными многополюсными выключателями нагрузки с ручным управлением. При выключении они обеспечивают надежную изоляцию для любых низковольтных цепей, особенно для схем управления оборудованием.
+                a(href="").categories__link.card-item__link.card-item__link_youtube Смотреть видео на YouTube
+          .card-item__contacts
+            .card-item__contacts_title Нужна консультация специалиста?
+            .card-item__contacts_subtitle Оставьте заявку и мы с радостью Вам поможем!
+            form.contacts-land__form.card-item__form
+              .contacts-land__form_string
+                .contacts-land__form_item
+                  label Ваше имя
+                  input(type="text" name="name").contacts-land__form_input
+                .contacts-land__form_item
+                  label Ваш телефон
+                  input(type="tel" name="tel").contacts-land__form_input
+              .contacts-land__form_offer.card-item__form_offer
+                label
+                  input(type="checkbox").contacts-land__form_checkbox
+                  span
+                .contacts-land__form_offer_inner.card-item__form_offer_inner Я принимаю <span>соглашение сайта</span> об обработке персональных данных
+              .contacts-land__form_footer
+                button(type="submit").button.card-item__button Отправить
+
+        .news-page__sidebar.card-item__sidebar
+          .card-item__sidebar_item
+            .sidebar-product__header.news-page__sidebar_header.card-item__sidebar_header Основные параметры
+            .news-page__sidebar_content
+              .news-page__sidebar_inner
+                .card-item__instruction_title.card-item__sidebar_squad от 16 до 125 А
+                .card-item__instruction_title.card-item__sidebar_squad отключение под и без нагрузки
+                .card-item__instruction_title.card-item__sidebar_squad двойной разрыв на фазу
+                .card-item__instruction_title.card-item__sidebar_squad монтаж на DIN рейку
+                .card-item__instruction_title.card-item__sidebar_squad технология дополнительных контактов
+          .card-item__sidebar_item
+            .sidebar-product__header.news-page__sidebar_header.card-item__sidebar_header Оптимальное решение для
+            .news-page__sidebar_content
+              .news-page__sidebar_inner
+                .card-item__instruction_title.card-item__sidebar_ok главный вводной выключатель
+                .card-item__instruction_title.card-item__sidebar_ok распределительный выключатель
+                .card-item__instruction_title.card-item__sidebar_ok управление оборудованием
+                .card-item__instruction_title.card-item__sidebar_ok локальное безопасное отключение нагрузки
+                img(src="./images/sidebar-1.png").card-item__sidebar_img
+          .card-item__sidebar_item
+            .sidebar-product__header.news-page__sidebar_header.card-item__sidebar_header Сильные стороны
+            .news-page__sidebar_content
+              .news-page__sidebar_inner
+                .card-item__instruction_title.card-item__sidebar_squad полная интеграция
+                .card-item__instruction_title.card-item__sidebar_squad широкая линейка аксессуаров
+                .card-item__instruction_title.card-item__sidebar_squad возможность модернизации
+                .card-item__instruction_title.card-item__sidebar_squad соответствие всем главным разрешениям и сертификатам
+                .card-item__instruction_title.card-item__sidebar_squad специальные характеристики
+          .card-item__sidebar_item
+            .sidebar-product__header.news-page__sidebar_header.card-item__sidebar_header Сильные стороны
+            .news-page__sidebar_content
+              .news-page__sidebar_inner
+                .card-item__instruction_title.card-item__sidebar_ok IEC 60947-3
+                .card-item__instruction_title.card-item__sidebar_ok доступны другие стандарты:
+                .card-item__sidebar_icons
+                  img(src="./images/sidebar-2.png").card-item__sidebar_icon
+                  img(src="./images/sidebar-3.png").card-item__sidebar_icon
+          .card-item__sidebar_item
+            .sidebar-product__header.news-page__sidebar_header.card-item__sidebar_header Разрешения и сертификация
+            .news-page__sidebar_content
+              .news-page__sidebar_inner
+                .card-item__sidebar_icons
+                  img(src="./images/sidebar-4.png").card-item__sidebar_icon
+                  img(src="./images/sidebar-5.png").card-item__sidebar_icon
+                .card-item__sidebar_mini <span>*</span> Номера артикулов сертифицированных устройств предоставляются по запросу
+
+
+
+
+
+
+
+
+  include ./blocks/footer.pug
