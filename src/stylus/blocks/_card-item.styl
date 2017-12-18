@@ -67,16 +67,19 @@
       font-family FontAwesome
       position: absolute
       font-size 1.8rem
-    &:after
-      content ''
-      right: calc(-2% - 5px);
-      bottom: -45px;
-      width 31px
-      height: 19px
-      background: url('../images/Triangle.svg') center center no-repeat
-      background-size cover
-      position absolute
+    &_after
+      overflow: hidden
+      &:after
+        content ''
+        right: calc(-2% - 5px);
+        bottom: -45px;
+        width 31px
+        height: 19px
+        background: url('../images/Triangle.svg') center center no-repeat
+        background-size cover
+        position absolute
   &__instruction
+    display none
     border 1px solid #1174BF
     position: relative
     &_elem

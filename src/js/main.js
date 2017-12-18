@@ -102,3 +102,29 @@ const certificatesSliderAbout = new Swiper('.certif-mini__container', {
 });
 
 halkaBox.run("certif-mini__gallery");
+
+// Открытие инструкции на странице товара
+
+const openInstruction = function(){
+  if(!document.querySelector('.card-item__documentation')) return null;
+  const link = document.querySelector('.card-item__documentation');
+  const content = document.querySelector('.card-item__instruction');
+  const triangle = document.querySelector('.card-item__documentation_after');
+  const cross = document.querySelector('.card-item__cross');
+  link.onclick = function(){
+    if(content.style.display==="") {
+      triangle.style.overflow = 'inherit';
+      content.style.display = 'block';
+      cross.style.transform = 'rotate(180deg)';
+      cross.style.paddingRight = '1rem';
+      cross.style.paddingLeft = '0rem';
+    } else {
+      triangle.style.overflow = '';
+      content.style.display = '';
+      cross.style.transform = '';
+      cross.style.paddingRight = '';
+      cross.style.paddingLeft = '';
+    }
+  }
+}
+openInstruction()
