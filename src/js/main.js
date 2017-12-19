@@ -1,3 +1,48 @@
+// Modal callback header
+var modal = new tingle.modal({
+  stickyFooter: false,
+  closeMethods: ['overlay', 'button', 'escape'],
+  closeLabel: "Close",
+  cssClass: ['call__wrapper', 'custom-class-2']
+});
+// wrapper callback
+const callBackWrap = () => {
+  return`<div class="call">
+          <div class="call__title">Заказать звонок</div>
+          <form class="call__form">
+            <div class="contacts-land__form_item call__item">
+              <label> Ваше имя </label>
+              <input type="text" name="name" class="contacts-land__form_input call__input" />
+            </div>
+            <div class="contacts-land__form_item call__item">
+              <label> Ваш телефон </label>
+              <input type="text" name="name" class="contacts-land__form_input call__input" />
+            </div>
+            <div class="contacts-land__form_offer call__offer">
+              <label>
+                <input type="checkbox" class="contacts-land__form_checkbox" />
+                <span />
+              </label>
+              <div class="contacts-land__form_offer_inner">Я принимаю <span>соглашение сайта</span> об обработке персональных данных</div>
+            </div>
+            <div class="contacts-land__form_footer">
+              <button type="submit" class="button"> Отправить </button>
+            </div>
+          </form>
+         </div>
+  `
+}
+const callBack = function(){
+  const callBackButton = Array.prototype.slice.call(document.querySelectorAll('.header__callback'));
+  if(!callBackButton) return null;
+  callBackButton.forEach((el) => el.onclick = function(e){
+    e.preventDefault();
+    modal.setContent(callBackWrap());
+    modal.open();
+    // [...document.querySelectorAll('input[type="tel"]')].forEach(input => new Inputmask('+7 (999) 999-99-99').mask(input));
+  })
+}()
+
 //Smooth scroll
 const scroll = new SmoothScroll('a[href*="#"]');
 //header slider
