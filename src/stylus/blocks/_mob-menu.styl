@@ -1,8 +1,13 @@
 .mobile
   &__nav
-    display: flex
     justify-content: center
     align-items: center
+    display: none
   &__menu
     margin-right 2rem
     cursor: pointer
+
+@media (max-width:1024px)
+  .mobile
+    &__nav
+      display flex
