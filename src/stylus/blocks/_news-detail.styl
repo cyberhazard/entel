@@ -28,13 +28,24 @@
       font-size 1.8rem
     &_text
       color black
-
+@media (max-width:1024px)
+  .news-detail
+    &__date
+      font-size 1.4rem
+    &__text
+      font-size 1.4rem
+      line-height 2.2rem
 @media (max-width:570px)
   .news-detail
+    &__date
+      font-size 1.2rem
+      margin-bottom 2rem
+    &__text
+      font-size 1.2rem
     &__more
       &_block
         display flex
-        justify-content: center
+        justify-content: space-around
     &__item
       flex-basis:100%
       max-width: 25rem
