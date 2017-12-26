@@ -173,3 +173,34 @@ const openInstruction = function(){
   }
 }
 openInstruction()
+
+
+// select страница Пресс-центр
+const selectNews = function(){
+  if(!document.querySelector('.news-page__select')) return null
+  const select = document.querySelector('.news-page__select');
+  const value = document.querySelector('.news-page__select_value');
+  const wrapper = document.querySelector('.news-page__select_wrapper');
+  const options = document.querySelector('.news-page__select_options');
+  const option = [...document.querySelectorAll('.news-page__select_option')]
+
+  const calcWrapperPosition = () => {
+    options.style.width =  select.clientWidth + 'px';
+    const { bottom, left } = select.getBoundingClientRect();
+    options.style.top = bottom + 'px';
+    options.style.left = left + 1 + 'px';
+  }
+
+  option.forEach(opt => opt.onclick = () => {
+    value.textContent = opt.textContent;
+    select.querySelector('input').value = opt.textContent;
+  })
+
+  value.onclick = () => {
+    wrapper.classList.toggle('active');
+    calcWrapperPosition();
+  }
+
+  window.onscroll = () =>  wrapper.classList.contains('active') && calcWrapperPosition();
+  wrapper.onclick = () => wrapper.classList.toggle('active')
+}()

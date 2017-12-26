@@ -88,6 +88,47 @@
       &_active
         background white
         border-radius 50%
+  &__select
+    width 100%
+    padding 0.6rem 2rem
+    background: #F6F6F6
+    font-family Roboto
+    font-size 1.4rem
+    cursor pointer
+    user-select none
+    position relative
+    &:after
+      content '\f107'
+      font-family FontAwesome
+      font-size 1.4rem
+      right 2rem
+      top 0.8rem
+      position: absolute
+    &_wrapper
+      display none
+      position: fixed
+      top 0
+      left 0
+      right 0
+      bottom 0
+    &_options
+      background: white
+      cursor pointer
+      position: absolute
+
+    &_option
+      padding 0.6rem 2rem
+      background: #F6F6F6
+      font-family Roboto
+      font-size 1.4rem
+      cursor pointer
+      user-select none
+      &:first-child
+        border-top 1px solid #e2e2e2
+
+.news-page__select_wrapper.active
+  display: block
+
 
 @media (max-width:1024px)
   .news-page

@@ -81,12 +81,36 @@ block content
                 .news-page__sidebar_title Видеозаписи
             .news-page__sidebar_block
               .news-page__sidebar_title.news-page__sidebar_title_theme Год публикации:
-              select
-                option 2016
+              .news-page__select
+                .news-page__select_value 2017
+                input(type="hidden").news-page__select_input
+                .news-page__select_wrapper
+                  .news-page__select_options
+                    .news-page__select_option 2017
+                    .news-page__select_option 2018
+
+
             .news-page__sidebar_block
               .news-page__sidebar_title.news-page__sidebar_title_theme Месяц публикации:
-              select
-                option Июль
+              .news-page__select
+                .news-page__select_value Январь
+                input(type="hidden").news-page__select_input
+                .news-page__select_wrapper
+                  .news-page__select_options
+                    .news-page__select_option Январь
+                    .news-page__select_option Февраль
+                    .news-page__select_option Март
+                    .news-page__select_option Апрель
+                    .news-page__select_option Май
+                    .news-page__select_option Июнь
+                    .news-page__select_option Июль
+                    .news-page__select_option Август
+                    .news-page__select_option Сентябрь
+                    .news-page__select_option Октябрь
+                    .news-page__select_option Ноябрь
+                    .news-page__select_option Декабрь
+
+
       .news-page__pagination
         a(href="").news-page__pagination_left
         .news-page__pagination_pages
