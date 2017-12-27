@@ -3,10 +3,12 @@
   &__slider
     width: calc(100% - 6rem)
     margin 0 auto
+    border 1px solid red
     &_span
       position relative
-      display inline-block
+      display block
       width 100%
+      border 1px solid #000
     &_prev
       transform: translateX(-25%)
     &_next, &_prev
@@ -21,8 +23,8 @@
     justify-content: space-between
     align-items: flex-start
   &__sidebar
-    width 100%
-    flex-basis 26%
+    width 26%
+    flex-shrink: 0
     &_title
       transition 0.3s
       cursor pointer
@@ -30,11 +32,12 @@
       &:hover
         background: #F3F3F3
   &__content
-    flex-basis 70%
+    width 70%
     font-family Roboto
     font-weight: 400
     line-height 2.2rem
     font-size 1.4rem
+    flex-shrink: 0
   &__title
     font-family: RobotoSlab
     font-weight: 700
