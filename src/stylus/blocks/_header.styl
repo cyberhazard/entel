@@ -16,14 +16,17 @@
     list-style-type none
     margin-right 4rem
     position: relative
+    &:hover ^[0]__triangle, &:hover .f-menu
+      opacity 1
+      pointer-events: all
 
-    & a
+    & > a
       color #BEBEBE
       transition 0.3s
       &:hover
         color black
     &_active
-      & a
+      & > a
         color black
       &:after
         content ''
@@ -63,6 +66,51 @@
       width 16px
       height: 16px
       position absolute
+  &__triangle
+    position absolute
+    top calc(100% + .5rem)
+    left 50%
+    transform translateX(-50%)
+    transition: opacity .3s
+    opacity 0
+
+.f-menu
+  position absolute
+  top calc(100% + 2rem)
+  left 50%
+  transform translateX(-28%)
+  justify-content space-between
+  padding 4.5rem 10rem
+  display flex
+  width 95rem
+  border 1px solid #1174BF
+  z-index 10
+  background-color #fff
+  transition: opacity .3s
+  opacity 0
+  pointer-events: none
+  :after
+    content: ''
+    width 100%
+    height 2.2rem
+    position absolute
+    left 0
+    bottom 100%
+  &__col
+    padding-right 3rem
+    &:last-child
+      padding-right 0
+  &__link
+    display block
+    font-size: 1.4rem
+    color black
+    margin-bottom 1.5rem
+    transition color .2s
+    &:hover
+      color #1174BF
+    &_bold
+      font-weight: 600
+      font-size: 1.6rem
 
 @media (max-width: 1175px)
   .header
