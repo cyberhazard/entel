@@ -204,3 +204,15 @@ const selectNews = function(){
   window.onscroll = () =>  wrapper.classList.contains('active') && calcWrapperPosition();
   wrapper.onclick = () => wrapper.classList.toggle('active')
 }()
+
+
+/**
+ * Открытие/Закрытие мобильного меню
+ */
+!function(){
+  const menuButton = document.querySelector('.mobile__menu');
+  const closeButton = document.querySelector('.header__close');
+  const menu = document.querySelector('.header__nav');
+  menuButton.onclick = () => menu.style.transform = 'translateX(0%)';
+  closeButton.onclick = () => menu.style.transform = '';
+}()
