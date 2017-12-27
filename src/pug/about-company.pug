@@ -69,9 +69,13 @@ block content
                       circle(stroke='#1579C5', stroke-width='2', cx='18', cy='18', r='18')
                       path(d='M16.86 24.677a1.08 1.08 0 0 1-1.541 0 1.113 1.113 0 0 1 0-1.56L20.37 18l-5.052-5.117a1.113 1.113 0 0 1 0-1.56 1.08 1.08 0 0 1 1.54 0l5.822 5.897c.425.431.425 1.13 0 1.56l-5.822 5.897z', fill='#1579C5')
 
+          .about-company__block#certif
+            .about-company__title Новости и мероприятия
+            include ./blocks/_news-slider.pug
 
 
           include ./blocks/contacts-land.pug
 
 
   include ./blocks/footer.pug
+  include blocks/_news-slider.pug

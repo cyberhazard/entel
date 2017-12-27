@@ -173,6 +173,24 @@ const clientsSliderAbout = new Swiper('.about-company__slider_clients', {
   }
 });
 
+/**
+ * Слайдер новости и мероприятия
+ */
+new Swiper('.news-s__slider', {
+  slidesPerView: 2,
+  spaceBetween: 50,
+  loop: true,
+  navigation: {
+    nextEl: '.news-s__next',
+    prevEl: '.news-s__prev',
+  },
+  breakpoints: {
+    720: {
+      slidesPerView: 1
+    }
+  }
+})
+
 halkaBox.run("certif-mini__gallery");
 
 // Открытие инструкции на странице товара
