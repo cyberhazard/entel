@@ -134,16 +134,14 @@ const tabsClick = function(){
 tabsClick();
 
 //certificates slider, about company page
-const certificatesSliderAbout = new Swiper('.certif-mini__container', {
+const certificatesSliderAbout = new Swiper('.about-company__slider', {
   slidesPerView: 3,
   spaceBetween: 0,
   loop: true,
-  centeredSlides: true,
   navigation: {
-    nextEl: '.certif-mini__next',
-    prevEl: '.certif-mini__prev',
-  },
-  slidesOffsetBefore: 18,
+    nextEl: '.about-company__slider_next',
+    prevEl: '.about-company__slider_prev',
+  }
 });
 
 halkaBox.run("certif-mini__gallery");
