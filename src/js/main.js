@@ -218,3 +218,17 @@ const selectNews = function(){
   menuButton.onclick = () => menu.style.transform = 'translateX(0%)';
   closeButton.onclick = () => menu.style.transform = '';
 }()
+
+/**
+ * Удаление пагинации
+ */
+
+const deletePagination = function(){
+  if(!document.querySelector('.news-page__pagination_number')) return null
+  const buttons = document.querySelectorAll('.news-page__pagination_number');
+  const block = document.querySelector('.news-page__pagination');
+  if(buttons.length===1){
+    block.style.display = "none";
+  };
+}
+deletePagination();
