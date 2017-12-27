@@ -143,8 +143,11 @@ const certificatesSliderAbout = new Swiper('.about-company__slider', {
     prevEl: '.about-company__slider_prev',
   },
   breakpoints: {
-    780: {
+    675: {
       slidesPerView: 2
+    },
+    480: {
+      slidesPerView: 1
     }
   }
 });
