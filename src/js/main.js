@@ -134,19 +134,40 @@ const tabsClick = function(){
 tabsClick();
 
 //certificates slider, about company page
-const certificatesSliderAbout = new Swiper('.about-company__slider', {
+const certificatesSliderAbout = new Swiper('.about-company__slider_cert', {
   slidesPerView: 3,
   spaceBetween: 0,
   loop: true,
   navigation: {
-    nextEl: '.about-company__slider_next',
-    prevEl: '.about-company__slider_prev',
+    nextEl: '#certif .about-company__slider_next',
+    prevEl: '#certif .about-company__slider_prev',
   },
   breakpoints: {
     675: {
       slidesPerView: 2
     },
     480: {
+      slidesPerView: 1
+    }
+  }
+});
+
+const clientsSliderAbout = new Swiper('.about-company__slider_clients', {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: '#clients .about-company__slider_next',
+    prevEl: '#clients .about-company__slider_prev',
+  },
+  breakpoints: {
+    675: {
+      slidesPerView: 3
+    },
+    560: {
+      slidesPerView: 2
+    },
+    400: {
       slidesPerView: 1
     }
   }
