@@ -10,8 +10,8 @@ block content
            .sidebar-product__header Разделы
            a(href="#info").sidebar-product__title.about-company__sidebar_title Общая информация
            a(href="#certif").sidebar-product__title.about-company__sidebar_title Наши сертификаты
-           a(href="#").sidebar-product__title.about-company__sidebar_title Наши клиенты
-           a(href="#").sidebar-product__title.about-company__sidebar_title Новости и мероприятия
+           a(href="#our-clients").sidebar-product__title.about-company__sidebar_title Наши клиенты
+           a(href="#news").sidebar-product__title.about-company__sidebar_title Новости и мероприятия
            a(href="#contacts").sidebar-product__title.about-company__sidebar_title Контакты
         .about-company__content
           .about-company__block#info
@@ -41,7 +41,7 @@ block content
             .about-company__title Наши сертификаты
             include ./blocks/certificates-slider-about.pug
 
-          .about-company__block#clients
+          .about-company__block#our-clients
             .about-company__title Наши клиенты
             .about-company__slider_span
               .about-company__slider.about-company__slider_clients.swiper-container
@@ -69,7 +69,7 @@ block content
                       circle(stroke='#1579C5', stroke-width='2', cx='18', cy='18', r='18')
                       path(d='M16.86 24.677a1.08 1.08 0 0 1-1.541 0 1.113 1.113 0 0 1 0-1.56L20.37 18l-5.052-5.117a1.113 1.113 0 0 1 0-1.56 1.08 1.08 0 0 1 1.54 0l5.822 5.897c.425.431.425 1.13 0 1.56l-5.822 5.897z', fill='#1579C5')
 
-          .about-company__block#certif
+          .about-company__block#news
             .about-company__title Новости и мероприятия
             include ./blocks/_news-slider.pug
 
