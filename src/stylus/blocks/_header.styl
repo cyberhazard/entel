@@ -5,10 +5,22 @@
     display flex
     justify-content: space-between
     align-items: center
+  &__close
+    display none
   &__nav
     display flex
     justify-content: space-between
     align-items: center
+    & ^[0]__contact
+      display none
+  &__close
+    position absolute
+    top 2rem
+    right 2rem
+    &:before
+      content: '\f00d'
+      font-family: 'FontAwesome'
+      font-size: 8vw
   &__li
     font-family: Roboto
     font-weight: 400
@@ -89,7 +101,7 @@
   transition: opacity .3s
   opacity 0
   pointer-events: none
-  :after
+  &:after
     content: ''
     width 100%
     height 2.2rem
@@ -122,11 +134,53 @@
     padding 4.5rem 5rem
 @media (max-width: 1024px)
   .header
+    &__close
+      display block
     &__nav
+      flex-direction: column
+      justify-content space-between
+      align-items center
+      background-color #fff
+      position fixed
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index 100
+      padding 10vh 0
+    &__li:last-of-type
       display none
+    &__triangle, .f-menu
+      display none
+    &__li
+      font-size 6rem
+      margin-right 0
     &__tel
       font-size 1.4rem
     &__callback
       font-size 1.2rem
     &__logo
       max-width: 12rem
+
+@media (max-width: 767px)
+  .header
+    &__li
+      font-size 3.5rem
+  .header__nav .header__contact
+      display block
+
+@media (max-height: 415px)
+  .header
+    &__nav
+      padding 6vh 0
+    &__tel
+      margin-bottom 1rem
+
+@media (max-height: 321px)
+  .header
+    &__nav
+      padding 4vh 0
+    &__li
+      font-size 3rem
+  .header__nav .header__contact
+      display block
