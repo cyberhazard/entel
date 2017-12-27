@@ -202,6 +202,7 @@ const selectNews = function(){
       calcWrapperPosition();
     }
     window.addEventListener('scroll', () => wrapper.classList.contains('active') && calcWrapperPosition())
+    window.addEventListener('resize', () => wrapper.classList.contains('active') && calcWrapperPosition())
     wrapper.onclick = () => wrapper.classList.toggle('active')
   })
 }()
