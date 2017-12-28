@@ -1,0 +1,41 @@
+.goods-page
+  &__items
+    display flex
+    flex-wrap wrap
+    justify-content: space-between
+  &__item
+    width calc(100% / 2 - 3rem)
+    margin-right 3rem
+    padding 2rem 5rem
+    background-color white
+    margin-bottom 3rem
+    text-align: center
+  &__wrap
+    width 100%
+    text-align: center
+    margin-bottom 5rem
+  &__img
+    width: 100%
+    object-fit: cover
+    max-width: 20rem
+  &__title
+    margin-bottom 3rem
+    font-family Roboto
+    font-size 1.8rem
+    line-height 2.6rem
+    font-weight 700
+  &__sidebar
+    flex-shrink 0
+    margin-right 6.4rem
+  &__button
+    padding 1rem 2rem
+    display inline-block
+
+@media (max-width:566px)
+  .goods-page
+    &__item
+      width 100%
+      margin-right 0
+    &__title
+      font-size 1.6rem
+      line-height 2.2rem

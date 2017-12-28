@@ -1,0 +1,25 @@
+extends layouts/_main.pug
+
+block content
+  include ./blocks/header.pug
+  section.categories
+    include ./blocks/breadcrumbs.pug
+    .g-wrapper
+      .categories__wrapper
+        include ./blocks/sidebar-product.pug
+        .categories__inside
+          .categories__title Multi-circuit metering & measurement
+          .goods-page__items
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+            include ./blocks/goods-page-item.pug
+  include ./blocks/footer.pug
+
