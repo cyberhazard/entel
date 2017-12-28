@@ -273,6 +273,17 @@ const selectNews = function(){
     window.addEventListener('resize', () => wrapper.classList.contains('active') && calcWrapperPosition())
     wrapper.onclick = () => wrapper.classList.toggle('active')
   })
+
+  const header = document.querySelector('.sidebar-product__header');
+  const wrapper = document.querySelector('.news-page__sidebar');
+  const height = header.clientHeight;
+  if (innerWidth < 1025) wrapper.style.height = height + 'px'
+  header.onclick = () => {
+    if (innerWidth > 1025) return null
+    if (wrapper.classList.contains('active-tab')) wrapper.style.height = height + 'px';
+    else  wrapper.style.height = wrapper.scrollHeight + 'px';
+    wrapper.classList.toggle('active-tab')
+  }
 }()
 
 
