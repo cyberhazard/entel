@@ -137,8 +137,18 @@
 
 @media (max-width:1024px)
   .news-page
+    &__content
+      flex-wrap wrap
     &__item
       flex-basis 44%
+    &__items
+      order 2
+      flex-basis: auto
+      flex-grow 1
+    &__sidebar
+      flex-basis auto
+      width 100%
+      margin-bottom 3rem
     &__pagination
       &_number
         &:nth-child(n+5)
@@ -149,8 +159,6 @@
       flex-basis 100%
     &__items
       flex-basis 100%
-    &__sidebar
-      display none
     &__title
       font-size 1.8rem
     &__pagination
