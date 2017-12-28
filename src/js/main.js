@@ -136,6 +136,17 @@ const tabsClick = function(){
   const tabs = [...document.querySelectorAll('.sidebar-product__item')];
   const contents = [...document.querySelectorAll('.sidebar-product__content')];
   const titles = [...document.querySelectorAll('.sidebar-product__title')];
+  const header = document.querySelector('.sidebar-product__header');
+  const wrapper = document.querySelector('.sidebar-product__wrapper');
+  const height = header.clientHeight;
+  if (innerWidth < 1025) wrapper.style.height = height + 'px'
+  header.onclick = () => {
+    if (innerWidth > 1025) return null
+    if (wrapper.classList.contains('active-tab')) wrapper.style.height = height + 'px';
+    else  wrapper.style.height = wrapper.scrollHeight + 'px';
+    wrapper.classList.toggle('active-tab')
+  }
+
   tabs.forEach((tab,i)=>{
     tab.onclick = (e) => {
       tabs.forEach(el=>el.classList.remove('sidebar-product__item_active'));
