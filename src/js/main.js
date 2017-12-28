@@ -311,3 +311,27 @@ const deletePagination = function(){
   };
 }
 deletePagination();
+
+
++function(){
+  if(!document.querySelector('.card-item__grid')) return null
+  const cardsItems = [...document.querySelectorAll('.card-item__grid')];
+  cardsItems.forEach(cardItem => {
+    const not_empty = [...cardItem.querySelectorAll('.card-item__grid_item')].some(el=>{
+      if (el.children.length == 0) {
+        el.remove(); return false
+        }
+    return true
+    });
+    if(!not_empty) cardItem.querySelector('.card-item__block_title').remove();
+  })
+}();
+
++function(){
+  if(!document.querySelector('.news-page__sidebar_content')) return null;
+  [...document.querySelectorAll('.news-page__sidebar_content')].forEach(el=>
+    el.textContent.trim() == '' && el.closest('.card-item__sidebar_item').remove()
+  )
+}();
+
+
