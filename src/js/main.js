@@ -10,7 +10,8 @@
  *       ░  ░            ░                   ░  ░       ░  ░
  *
  */
-
+const feedbackPhone = document.querySelector('.contacts-land__form_input[name="tel"]');
+feedbackPhone && new Inputmask({ mask: '+7 (999) 999-99-99' }).mask(feedbackPhone);
 // почта
 var sendMail = function sendMail(selector) {
   return fetch('/mail.php', {
@@ -81,6 +82,7 @@ const callBack = function(){
     e.preventDefault();
     modal.setContent(callBackWrap());
     modal.open();
+    [...document.querySelectorAll('input[type="tel"]')].forEach(input => new Inputmask('+7 (999) 999-99-99').mask(input));
     const checkbox = document.querySelector('#check-modal')
     document.querySelector(".call__form").onsubmit = function(e){
       e.preventDefault();
