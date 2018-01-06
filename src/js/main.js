@@ -10,6 +10,35 @@
  *       ░  ░            ░                   ░  ░       ░  ░
  *
  */
+
+// почта
+var sendMail = function sendMail(selector) {
+  return fetch('/mail.php', {
+    method: 'POST',
+    body: new FormData(document.querySelector(selector))
+  }).catch(function (error) {
+    alertify.error("Ошибка. Повторите отправку позже");
+  });
+};
+
+/**
+ * Отправка заявки главная
+ */
+var footerForm = function(){
+  const submit = document.querySelector('.footer__submit')
+  const checkbox = document.querySelector('.contacts-land__form_checkbox')
+  document.querySelector(".contacts-land__form").onsubmit = function(e){
+    e.preventDefault();
+    if(!checkbox.checked){
+      alertify.error("Вы не приняли соглашение об обработке персональных данных");
+    } else {
+      sendMail('.contacts-land__form').then(_ => (alertify.success("Ваша заявка отправленна"), document.querySelector(".contacts-land__form").reset()))
+    }
+  }
+}
+footerForm();
+
+
 // Modal callback header
 var modal = new tingle.modal({
   stickyFooter: false,

@@ -62,6 +62,7 @@
     &_item
       width 100%
       margin-right 3rem
+      position: relative
       &:last-child
         margin-right 0
       & label
@@ -70,6 +71,12 @@
         color #BEBEBE
         font-family: Roboto
         font-weight: 400
+    &_label
+      position: absolute
+      top 12px
+      left 8px
+      transition: .5s
+      pointer-events: none
     &_input
       width 100%
       font-size 1.4rem
@@ -80,6 +87,7 @@
       margin-bottom 5.4rem
       transition 0.3s
       background transparent
+      position relative
       &:hover
         border-bottom 1px solid #727272
       &:focus
@@ -110,6 +118,10 @@
           color #187CC8
           text-decoration: underline
           cursor pointer
+.contacts-land__form_input:focus + .contacts-land__form_label, .contacts-land__form_input:valid + .contacts-land__form_label
+  top -10px
+  left 8px
+
 
 .contacts-land__form_offer input[type='checkbox']:checked + span
   position: absolute
