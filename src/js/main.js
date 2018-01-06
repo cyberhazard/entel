@@ -25,6 +25,7 @@ var sendMail = function sendMail(selector) {
  * Отправка заявки главная
  */
 var sendForm = function(){
+  if(!document.querySelector(".contacts-land__form")) return null
   const submit = document.querySelector('.footer__submit')
   const checkbox = document.querySelector('.contacts-land__form_checkbox')
   document.querySelector(".contacts-land__form").onsubmit = function(e){
@@ -56,7 +57,7 @@ const callBackWrap = () => {
               <label class="contacts-land__form_label"> Ваше имя </label>
             </div>
             <div class="contacts-land__form_item call__item">
-              <input type="text" name="name" class="contacts-land__form_input call__input" required/>
+              <input type="tel" name="tel" class="contacts-land__form_input call__input" required/>
               <label class="contacts-land__form_label"> Ваш телефон </label>
             </div>
             <div class="contacts-land__form_offer call__offer">
@@ -72,7 +73,7 @@ const callBackWrap = () => {
           </form>
          </div>
   `
-}
+};
 const callBack = function(){
   const callBackButton = Array.prototype.slice.call(document.querySelectorAll('.header__callback'));
   if(!callBackButton) return null;
@@ -91,7 +92,7 @@ const callBack = function(){
       }
     }
   })
-}()
+}();
 
 //Smooth scroll
 const scroll = new SmoothScroll('a[href*="#"]');
