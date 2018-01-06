@@ -24,7 +24,7 @@ var sendMail = function sendMail(selector) {
 /**
  * Отправка заявки главная
  */
-var footerForm = function(){
+var sendForm = function(){
   const submit = document.querySelector('.footer__submit')
   const checkbox = document.querySelector('.contacts-land__form_checkbox')
   document.querySelector(".contacts-land__form").onsubmit = function(e){
@@ -36,7 +36,7 @@ var footerForm = function(){
     }
   }
 }
-footerForm();
+sendForm();
 
 
 // Modal callback header
@@ -52,16 +52,16 @@ const callBackWrap = () => {
           <div class="call__title">Заказать звонок</div>
           <form class="call__form">
             <div class="contacts-land__form_item call__item">
-              <label> Ваше имя </label>
-              <input type="text" name="name" class="contacts-land__form_input call__input" />
+              <input type="text" name="name" class="contacts-land__form_input call__input" required/>
+              <label class="contacts-land__form_label"> Ваше имя </label>
             </div>
             <div class="contacts-land__form_item call__item">
-              <label> Ваш телефон </label>
-              <input type="text" name="name" class="contacts-land__form_input call__input" />
+              <input type="text" name="name" class="contacts-land__form_input call__input" required/>
+              <label class="contacts-land__form_label"> Ваш телефон </label>
             </div>
             <div class="contacts-land__form_offer call__offer">
               <label>
-                <input type="checkbox" class="contacts-land__form_checkbox" />
+                <input type="checkbox" class="contacts-land__form_checkbox" id="check-modal" />
                 <span />
               </label>
               <div class="contacts-land__form_offer_inner">Я принимаю <span>соглашение сайта</span> об обработке персональных данных</div>
@@ -80,7 +80,16 @@ const callBack = function(){
     e.preventDefault();
     modal.setContent(callBackWrap());
     modal.open();
-    // [...document.querySelectorAll('input[type="tel"]')].forEach(input => new Inputmask('+7 (999) 999-99-99').mask(input));
+    const checkbox = document.querySelector('#check-modal')
+    document.querySelector(".call__form").onsubmit = function(e){
+      e.preventDefault();
+      if(!checkbox.checked){
+        alertify.error("Вы не приняли соглашение об обработке персональных данных");
+      } else {
+        sendMail('.call__form').then(_ => (alertify.success("Ваша заявка отправленна"), document.querySelector(".call__form").reset()))
+        modal.close();
+      }
+    }
   })
 }()
 
