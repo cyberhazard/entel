@@ -241,7 +241,7 @@ const clientsSliderAbout = new Swiper('.about-company__slider_clients', {
  * Слайдер новости и мероприятия
  */
 new Swiper('.news-s__slider', {
-  slidesPerView: 2,
+  slidesPerView: 3,
   spaceBetween: 50,
   loop: true,
   navigation: {
