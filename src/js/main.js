@@ -376,3 +376,40 @@ deletePagination();
 }();
 
 
+!function(){
+  if (innerWidth <= 1024) return null
+  const leftBlock = document.querySelector('.sidebar-product.goods-page__sidebar');
+  const rightBlock = document.querySelector('.categories__inside');
+  const sidebar = document.querySelector('.sidebar-product__wrapper');
+  let height = sidebar.clientHeight;
+
+  const makeFixed =() => {
+    const { top, left } = leftBlock.getBoundingClientRect();
+    const { bottom } = rightBlock.getBoundingClientRect();
+    if (top < 30) {
+      sidebar.style.position = 'fixed';
+      sidebar.style.top = '30px';
+      sidebar.style.left = left + 'px';
+      sidebar.style.width = leftBlock.clientWidth + 'px';
+    }
+    if (top > 30 && sidebar.style.position == 'fixed') {
+      sidebar.style.position = sidebar.style.top = sidebar.style.left = sidebar.style.width = '';
+    }
+    if (bottom <= height + 30) {
+      height = sidebar.clientHeight;
+      sidebar.style.top = bottom - height - 40 + 'px'
+    }
+  }
+
+  makeFixed();
+
+  window.addEventListener('scroll', makeFixed)
+  window.addEventListener('resize', () => {
+    if (sidebar.style.position == 'fixed') {
+      const { left } = leftBlock.getBoundingClientRect();
+      sidebar.style.left = left + 'px';
+      sidebar.style.width = leftBlock.clientWidth + 30 + 'px';
+    }
+    if (innerWidth <= 1024) sidebar.style.position = sidebar.style.top = sidebar.style.left = sidebar.style.width = '';
+  })
+}()
