@@ -188,12 +188,12 @@ const tabsClick = function(){
     wrapper.classList.toggle('active-tab')
   }
 
-  tabs.forEach((tab,i)=>{
-    tab.onclick = (e) => {
-      tabs.forEach(el=>el.classList.remove('sidebar-product__item_active'));
-      e.currentTarget.classList.add('sidebar-product__item_active');
-    }
-  })
+  // tabs.forEach((tab,i)=>{
+  //   tab.onclick = (e) => {
+  //     tabs.forEach(el=>el.classList.remove('sidebar-product__item_active'));
+  //     e.currentTarget.classList.add('sidebar-product__item_active');
+  //   }
+  // })
 }
 tabsClick();
 
