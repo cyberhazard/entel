@@ -8,6 +8,7 @@
   &__close
     display none
   &__nav
+    position relative
     display flex
     justify-content: space-between
     align-items: center
@@ -123,6 +124,41 @@
     &_bold
       font-weight: 600
       font-size: 1.6rem
+
+.search
+  position absolute
+  top -2px
+  right 0
+  min-width: 18px
+  background-color #fff
+  &__loop
+    position absolute
+    top 4px
+    left 0
+    cursor pointer
+  &__close
+    position absolute
+    top 6px
+    right 0
+    width 13px
+    height 13px
+    opacity 0
+    transition .5s
+    pointer-events: none
+    cursor pointer
+  &__input
+    width 0
+    padding 6px 0
+    font-size: 14px
+    border: none
+    border-bottom: 2px solid #3578C2
+    transition: width .5s;
+    will-change: width
+  &.active ^[0]__input
+    padding 6px 24px
+  &.active ^[0]__close
+    opacity 0.5
+    pointer-events: all
 
 @media (max-width: 1175px)
   .header

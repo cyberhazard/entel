@@ -414,3 +414,22 @@ deletePagination();
     if (innerWidth <= 1024) sidebar.style.position = sidebar.style.top = sidebar.style.left = sidebar.style.width = '';
   })
 }()
+
+//- Search
+!function(){
+  const menu = document.querySelector('.header__nav');
+  const search = document.querySelector('.search');
+  const loop = document.querySelector('.search__loop');
+  const close = document.querySelector('.search__close');
+  const input = document.querySelector('.search__input');
+
+  loop.onclick = () => {
+    search.classList.add('active');
+    input.style.width = menu.clientWidth + 'px';
+  }
+  close.onclick = () => {
+    search.classList.remove('active');
+    input.style.width = '';
+    input.value = '';
+  }
+}()
