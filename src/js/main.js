@@ -381,6 +381,7 @@ deletePagination();
   const leftBlock = document.querySelector('.sidebar-product.goods-page__sidebar');
   const rightBlock = document.querySelector('.categories__inside');
   const sidebar = document.querySelector('.sidebar-product__wrapper');
+  if (!sidebar) return null
   let height = sidebar.clientHeight;
 
   const makeFixed =() => {
