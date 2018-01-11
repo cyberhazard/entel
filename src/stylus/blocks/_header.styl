@@ -131,6 +131,7 @@
   right 0
   min-width: 18px
   background-color #fff
+  z-index 100
   &__loop
     position absolute
     top 4px
@@ -154,8 +155,24 @@
     border-bottom: 2px solid #3578C2
     transition: width .5s;
     will-change: width
+    margin-bottom 14px
+  &__link
+    font-family: 'Roboto'
+    font-size: 1.6rem
+    padding 4px 8px
+    display block
+    color: black
+    font-weight: 600
+    & span
+      color gray
+      font-size: 1.4rem
+      padding-left 12px
+  &__results
+    display none
   &.active ^[0]__input
     padding 6px 24px
+  &.active ^[0]__results
+    display block
   &.active ^[0]__close
     opacity 0.5
     pointer-events: all
