@@ -422,14 +422,41 @@ deletePagination();
   const loop = document.querySelector('.search__loop');
   const close = document.querySelector('.search__close');
   const input = document.querySelector('.search__input');
+  const results = document.querySelector('.search__results');
+
+  const makeLink = ({link, name, category}) => `<a href="${link}" class="search__link">${name} <span>${category}</span></a>`
 
   loop.onclick = () => {
     search.classList.add('active');
     input.style.width = menu.clientWidth + 'px';
+    if (!window.searchData) {
+      window.searchData = { categories: {} };
+      fetch('/wp-json/wp/v2/categories?per_page=100').then(r=>r.json())
+        .then(categories => categories.forEach(({id, name}) => window.searchData.categories[id] = name ))
+        .then(_ => {
+          fetch('/wp-json/wp/v2/products?per_page=100').then(r => r.json())
+          .then(products => window.searchData.products = products.map(
+            (p) => ({
+              name: p.title.rendered,
+              link: p.link,
+              category: window.searchData.categories[p.categories[0]]
+            })
+          ))
+        }).catch(console.log)
+    }
   }
   close.onclick = () => {
     search.classList.remove('active');
     input.style.width = '';
-    input.value = '';
+    input.value = results.innerHTML = '';
+  }
+  input.oninput = (e) => {
+    if (!window.searchData.products) return null
+    const searchString = e.target.value;
+    let rez = window.searchData.products.filter(p => p.name.toLowerCase().includes(searchString.toLowerCase()));
+    if(rez) {
+      if (rez.length > 6) rez.length = 6;
+      results.innerHTML = rez.map(makeLink).join('');
+    }
   }
 }()
