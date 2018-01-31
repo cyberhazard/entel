@@ -287,7 +287,7 @@ openInstruction()
 // select страница Пресс-центр
 const selectNews = function(){
   if(!document.querySelector('.news-page__select')) return null
-  const selects = document.querySelectorAll('.news-page__select');
+  const selects = [...document.querySelectorAll('.news-page__select')];
   selects.forEach(select => {
     const value = select.querySelector('.news-page__select_value');
     const wrapper = select.querySelector('.news-page__select_wrapper');
