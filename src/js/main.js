@@ -46,7 +46,15 @@ var modal = new tingle.modal({
   stickyFooter: false,
   closeMethods: ['overlay', 'button', 'escape'],
   closeLabel: "Close",
-  cssClass: ['call__wrapper', 'custom-class-2']
+  cssClass: ['call__wrapper', 'custom-class-2'],
+  onOpen: function(){
+    const button = document.querySelector('.policy__callback')
+    button.onclick = function(e){
+      e.preventDefault();
+      showPolitics();
+      console.log(modal.close());
+    }
+  },
 });
 // wrapper callback
 const callBackWrap = () => {
@@ -66,13 +74,13 @@ const callBackWrap = () => {
                 <input type="checkbox" class="contacts-land__form_checkbox" id="check-modal" />
                 <span />
               </label>
-              <div class="contacts-land__form_offer_inner">Я принимаю <span>соглашение сайта</span> об обработке персональных данных</div>
+              <div class="contacts-land__form_offer_inner">Я принимаю <a class="policy__callback"><span>соглашение сайта</span></a> об обработке персональных данных</div>
             </div>
             <div class="contacts-land__form_footer">
               <button type="submit" class="button"> Отправить </button>
             </div>
           </form>
-         </div>
+         </div>е
   `
 };
 const callBack = function(){
@@ -95,6 +103,57 @@ const callBack = function(){
     }
   })
 }();
+
+var politicModal = new tingle.modal({
+  stickyFooter: false,
+  closeMethods: ['overlay', 'button', 'escape'],
+  closeLabel: "Close",
+  cssClass: ['politic_wrapper', 'custom-class-2']
+});
+
+const politic = `<div style="">
+<h2>Политика конфиденциальности</h2>
+<p>Настоящий документ «Политика конфиденциальности» представляет собой правила использования персональной информации Пользователя.</p>
+<p>Предоставляя свои персональные данные Пользователь даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:</p>
+<ul>
+  <li>Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования Сайта, оказания услуг, обработку запросов и заявок от Пользователя.</li>
+  <li>Осуществление клиентской поддержки</li>
+  <li>Получения Пользователем информации о маркетинговых событиях</li>
+  <li>Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг</li>
+</ul>
+<h3>Персональная информация</h3>
+<p>Под персональными данными подразумевается любая информация, предоставляемая пользователем самостоятельно, включая персональные данные пользователя, такие как:</p>
+<ul>
+<li>Фамилия, Имя, Отчество</li>
+<li>Контактный телефон</li>
+<li>Адрес электронной почты</li>
+</ul>
+А также данные, которые передаются в автоматическом режиме.
+<p>Персональные данные Пользователей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства.</p>
+<p>Компания обязуется не передавать полученные персональные данные третьим лицам, за исключением следующего случая:</p>
+<ul>
+<li>По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ.</li>
+</ul>
+<p> Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.
+</p></div>
+`;
+
+var showPolitics = function(){
+  politicModal.setContent(politic);
+  politicModal.open();
+}
+/**
+ * Вызов политики конф в футер форме
+ */
+var openFooterPolitics = function(){
+  const button = document.querySelectorAll('.policy__callback')
+  button.forEach(el=> {el.onclick = function(e){
+    e.preventDefault();
+    modal.close();
+    showPolitics();
+  }})
+}
+openFooterPolitics();
 
 //Smooth scroll
 const scroll = new SmoothScroll('a[href*="#"]');
