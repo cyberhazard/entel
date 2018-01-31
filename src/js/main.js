@@ -146,7 +146,7 @@ var showPolitics = function(){
  * Вызов политики конф в футер форме
  */
 var openFooterPolitics = function(){
-  const button = document.querySelectorAll('.policy__callback')
+  const button = [...document.querySelectorAll('.policy__callback')]
   button.forEach(el=> {el.onclick = function(e){
     e.preventDefault();
     modal.close();
