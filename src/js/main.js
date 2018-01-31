@@ -262,8 +262,8 @@ const certificatesSliderAbout = new Swiper('.about-company__slider_cert', {
   spaceBetween: 0,
   loop: true,
   navigation: {
-    nextEl: '#certif .about-company__slider_next',
-    prevEl: '#certif .about-company__slider_prev',
+    nextEl: '#certificate .about-company__slider_next',
+    prevEl: '#certificate .about-company__slider_prev',
   },
   breakpoints: {
     675: {
