@@ -51,8 +51,8 @@ var modal = new tingle.modal({
     const button = document.querySelector('.policy__callback')
     button.onclick = function(e){
       e.preventDefault();
+      modal.close()
       showPolitics();
-      console.log(modal.close());
     }
   },
 });
