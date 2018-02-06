@@ -485,7 +485,8 @@ deletePagination();
 
   const makeLink = ({link, name, category}) => `<a href="${link}" class="search__link">${name} <span>${category}</span></a>`
 
-  loop.onclick = () => {
+  loop.onclick = (e) => {
+    e.stopPropagation();
     search.classList.add('active');
     input.style.width = menu.clientWidth + 'px';
     if (!window.searchData) {
@@ -509,6 +510,15 @@ deletePagination();
     input.style.width = '';
     input.value = results.innerHTML = '';
   }
+
+  document.body.addEventListener('click', () => {
+    if (search.classList.contains('active')) {
+      search.classList.remove('active');
+      input.style.width = '';
+      input.value = results.innerHTML = '';
+    }
+  })
+
   input.oninput = (e) => {
     if (!window.searchData.products) return null
     const searchString = e.target.value;
@@ -518,4 +528,6 @@ deletePagination();
       results.innerHTML = rez.map(makeLink).join('');
     }
   }
+
+  input.onclick = e => e.stopPropagation();
 }()
