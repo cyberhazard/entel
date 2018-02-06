@@ -489,6 +489,7 @@ deletePagination();
     e.stopPropagation();
     search.classList.add('active');
     input.style.width = menu.clientWidth + 'px';
+    input.focus();
     if (!window.searchData) {
       window.searchData = { categories: {} };
       fetch('/wp-json/wp/v2/categories?per_page=100').then(r=>r.json())
@@ -528,6 +529,12 @@ deletePagination();
       results.innerHTML = rez.map(makeLink).join('');
     }
   }
+
+  input.onkeyup = e => e.keyCode === 27 && (
+    search.classList.remove('active'),
+    input.style.width = '',
+    input.value = results.innerHTML = ''
+  )
 
   input.onclick = e => e.stopPropagation();
 }()
